@@ -8,12 +8,20 @@
 .gallery img {
     width: 100%;
     height: 400px;
-    object-fit: fill;
+    object-fit: cover;
     border-radius: 15px;
     box-shadow: inset 1px 3px 33px 12px #6B6B6B;
     box-shadow: 0px 0px 26px 4px #262626;
     background-color: rgba(0, 0, 0, 0.847);
     display: none;
+}
+
+.gallery img:first-child {
+    object-position: 50% 30%;
+}
+
+.gallery img:nth-child(3){
+    object-position: right top;
 }
 
 .fa-regular {
@@ -41,7 +49,7 @@
 .prev-img img{
     height: 100%;
     width: calc(100% / 5);
-    object-fit: fill;
+    object-fit: cover;
     box-shadow: 0px 0px 26px 4px #262626;
     border: 10px solid whitesmoke; 
 }
