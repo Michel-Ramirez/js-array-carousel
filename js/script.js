@@ -5,7 +5,7 @@ const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 const innerGallery = document.querySelector('.gallery')
 const prevImgGallery = document.querySelector('.prev-img')
-//lista delle immagini da passare al 
+//lista delle immagini array
 const listImg = ['img/01.webp', 'img/02.webp', 'img/03.webp', 'img/04.webp', 'img/05.webp'];
 
 // Variabile di appoggio per gli elementi da montare 
