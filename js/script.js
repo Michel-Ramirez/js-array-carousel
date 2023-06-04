@@ -79,6 +79,7 @@ nextBtn.addEventListener('click', function(){
     images[currentImg].classList.add('d-block');
     
     thumbImg[currentThumb].classList.add('border');
+
 });
 
 // al click deve fare la stessa cosa di sopra ma decrementando la posizione du currentImg
@@ -94,7 +95,6 @@ prevBtn.addEventListener('click', function(){
     images[currentImg].classList.remove('d-block');
 
     thumbImg[currentThumb].classList.remove('border');
-
     
     //INCREMENTO LA POSIZIONE 
     
@@ -106,7 +106,6 @@ prevBtn.addEventListener('click', function(){
     images[currentImg].classList.add('d-block');
 
     thumbImg[currentThumb].classList.add('border');
-
     
 });
 

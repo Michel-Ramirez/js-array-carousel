@@ -51,9 +51,5 @@
     width: calc(100% / 5);
     object-fit: cover;
     box-shadow: 0px 0px 26px 4px #262626;
-    border: 10px solid whitesmoke; 
-}
-
-.border {
-    border: none;
+    border: 10px solid whitesmoke;
 }
