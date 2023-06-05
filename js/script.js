@@ -60,9 +60,9 @@ nextBtn.addEventListener('click', function(){
     
     //Aggiungo controllo: se non ci sono più immagini stoppa l'incremento
     
-    if (currentImg === images.length - 1 ) {
-        return;
-    }
+    // if (currentImg === images.length - 1 ) {
+    //     return;
+    // }
     
     //rimuovo la classe dall'immagine
     images[currentImg].classList.remove('d-block');
@@ -70,10 +70,20 @@ nextBtn.addEventListener('click', function(){
     thumbImg[currentThumb].classList.remove('border');
 
     //INCREMENTO LA POSIZIONE 
-    
+
     currentImg++;
 
+    // CONTROLLO \\ - se l'immagine corrente è all'ultima posizione del mio array, incrementando ancora una volta torno alla prima posizione
+    if (currentImg === listImg.length) {
+        currentImg = 0;
+    }
+
     currentThumb++;
+
+    // stesso proccedimento per le img sopra
+    if (currentThumb === listImg.length) {
+        currentThumb = 0
+    }
     
     //aggiungo la classe 
     images[currentImg].classList.add('d-block');
@@ -87,9 +97,9 @@ prevBtn.addEventListener('click', function(){
     
     //Aggiungo controllo: se non ci sono più immagini stoppo
     
-    if (currentImg === 0){
-        return;
-    }
+    // if (currentImg === 0){
+    //     return;
+    // }
     
     //rimuovo la classe dall'immagine
     images[currentImg].classList.remove('d-block');
@@ -100,7 +110,15 @@ prevBtn.addEventListener('click', function(){
     
     currentImg--;
     
+    if ( currentImg < 0 ) {
+        currentImg = listImg.length -1;
+    }
+
     currentThumb--;
+
+    if ( currentThumb < 0 ) {
+        currentThumb = listImg.length -1;
+    }
 
     //aggiungo la classe 
     images[currentImg].classList.add('d-block');
